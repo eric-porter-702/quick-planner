@@ -1,0 +1,3 @@
+My name is Eric Porter and I am a current student at Drexel University studying Computer Science as my major.
+My programming experience includes Java, JavaScript, Python and some web development.
+My father is a 40 year veteran software engineer and I gained most of my inspiration from him.
