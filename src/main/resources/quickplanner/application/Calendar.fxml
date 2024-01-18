@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickplanner.application.CalendarController">
+   <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="760.0" prefWidth="1474.0" style="-fx-background-color: #FFFFFF;" stylesheets="@Calendar.css">
+         <FlowPane fx:id="calendar" hgap="10.0" layoutX="5.0" layoutY="125.0" prefHeight="837.0" prefWidth="1470.0" vgap="5.0" />
+         <HBox alignment="CENTER" layoutX="530.0" layoutY="16.0" prefHeight="44.0" prefWidth="419.0" spacing="10.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#nextMonth" prefHeight="30.0" prefWidth="31.0" text="&lt;" />
+               <Label fx:id="month" text="Month">
+                  <font>
+                     <Font size="26.0" />
+                  </font>
+               </Label>
+               <Label fx:id="year" text="Year">
+                  <font>
+                     <Font size="26.0" />
+                  </font>
+               </Label>
+               <Button mnemonicParsing="false" onAction="#previousMonth" prefHeight="30.0" prefWidth="31.0" text="&gt;" />
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" layoutX="-4.0" layoutY="75.0" prefHeight="44.0" prefWidth="1488.0" spacing="166.0" style="-fx-background-color: #7156DD;">
+            <children>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sunday" textAlignment="CENTER" />
+               <Text layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monday" textAlignment="CENTER" />
+               <Text layoutX="222.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday" textAlignment="CENTER" />
+               <Text layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wednesday" textAlignment="CENTER" />
+               <Text layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thursday" textAlignment="CENTER" />
+               <Text layoutX="251.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friday" textAlignment="CENTER" />
+               <Text layoutX="266.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saturday" textAlignment="CENTER" />
+            </children>
+            <padding>
+               <Insets right="9.0" />
+            </padding>
+         </HBox>
+         <Button layoutX="1291.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToMy_Planners" prefHeight="44.0" prefWidth="128.0" text="Planner" />
+         <Button mnemonicParsing="false" onAction="#switchToHome_screen" prefHeight="69.0" prefWidth="84.0">
+            <graphic>
+               <ImageView fitHeight="61.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@logo_img/Quick-Planner-logos_transparent.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+
+      </AnchorPane>
+   </content>
+</ScrollPane>

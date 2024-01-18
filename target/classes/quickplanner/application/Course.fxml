@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1445.0" style="-fx-background-color: #3F2B63;" stylesheets="@Course.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickplanner.application.CourseController">
+   <children>
+      <Text fill="WHITE" layoutX="1040.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:" wrappingWidth="281.3612060546875">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text fx:id="percentGrade" fill="WHITE" layoutX="1042.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="1030.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course:">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Text fx:id="courseName" fill="WHITE" layoutX="1042.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Default" wrappingWidth="275.9144287109375">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableView" layoutX="305.0" layoutY="157.0" prefHeight="479.0" prefWidth="683.0">
+         <columns>
+            <TableColumn fx:id="NameColumn" prefWidth="170.75" text="Task Name" />
+            <TableColumn fx:id="TypeColumn" minWidth="8.800048828125" prefWidth="170.75" text="Task Type" />
+            <TableColumn fx:id="ActualScoreColumn" onEditCommit="#editScoredPoints" prefWidth="170.75" text="Scored Points" />
+            <TableColumn fx:id="TotalScoreColumn" prefWidth="170.75" text="Total Points" />
+         </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="1186.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <VBox layoutX="-6.0" layoutY="-7.0" prefHeight="850.0" prefWidth="158.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToHome_screen" prefHeight="150.0" prefWidth="158.0">
+               <graphic>
+                  <ImageView fitHeight="134.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo_img/Quick-Planner-logos_transparent.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#goBack" prefHeight="75.0" prefWidth="180.0" text="Back">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

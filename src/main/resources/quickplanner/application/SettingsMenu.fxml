@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="837.0" prefWidth="1445.0" style="-fx-background-color: #FFFFFF;" stylesheets="@SettingsMenu.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quickplanner.application.SettingsMenuController">
+   <children>
+      <Text layoutX="283.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Directory Name: ">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <TextField fx:id="directoryName" layoutX="640.0" layoutY="280.0" prefHeight="60.0" prefWidth="340.0" promptText="desired directory name here">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="283.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications Start:">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <TextField fx:id="notificationTimer" layoutX="640.0" layoutY="360.0" prefHeight="60.0" prefWidth="340.0" promptText="time before deadline to nofity (in hours)">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Text layoutX="283.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications Repeat:">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <TextField fx:id="notificationRepeat" layoutX="640.0" layoutY="440.0" prefHeight="60.0" prefWidth="340.0" promptText="time in between notifications (in hours)" />
+      <Text layoutX="283.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Auto Save Feature:">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <TextField fx:id="autoSave" layoutX="640.0" layoutY="520.0" prefHeight="60.0" prefWidth="340.0" promptText="type yes to turn on, no to turn off" />
+      <Text layoutX="283.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Open to Last Saved:">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <TextField fx:id="lastSaved" layoutX="640.0" layoutY="600.0" prefHeight="60.0" prefWidth="340.0" promptText="type yes to turn on, no to turn off" />
+      <Text fx:id="directoryText" layoutX="1000.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QuickPlanner">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <Text fx:id="notirepeatText" layoutX="1000.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <Text fx:id="notistartText" layoutX="1000.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="24">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <Text fx:id="lastsavedText" layoutX="1000.0" layoutY="640.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <Text fx:id="autosaveText" layoutX="1000.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no">
+         <font>
+            <Font size="36.0" />
+         </font></Text>
+      <ImageView fitHeight="144.0" fitWidth="140.0" layoutX="325.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo_img/settings_black.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="-12.0" layoutY="-12.0" prefHeight="850.0" prefWidth="158.0" style="-fx-background-color: #3F2863;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToHome_screen" prefHeight="150.0" prefWidth="158.0" stylesheets="@My_Planners.css">
+               <graphic>
+                  <ImageView fitHeight="146.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo_img/Quick-Planner-1-5.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#saveSettings" prefHeight="75.0" prefWidth="158.0" text="Save Settings" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Button>
+            <Button fx:id="Exit" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Exit" prefHeight="70.0" prefWidth="433.0" stylesheets="@Home_screen.css" text="Exit" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="198.0" fitWidth="564.0" layoutX="470.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo_img/SettingsText.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
